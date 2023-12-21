@@ -80,3 +80,5 @@ export default function AboutPage() {
         </main>
     </Layout>)
 }
+
+export const Head = () => <title>About Us | Amilod Zareg</title>

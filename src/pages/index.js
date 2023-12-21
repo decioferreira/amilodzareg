@@ -6,38 +6,36 @@ const IndexPage = () => {
   return (
     <Layout>
       <main className="isolate">
-        <div className="relative isolate overflow-hidden pt-14">
-          <StaticImage className="absolute inset-0 -z-10 h-full w-full object-cover brightness-50 contrast-75" src="../images/hero.jpg" alt="" />
-          <div
-            className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-            aria-hidden="true"
-          >
-            <div
-              className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-              style={{
-                clipPath:
-                  'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-              }}
-            />
-          </div>
-          <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl drop-shadow-xl">
-                Amilod Zareg
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-300 drop-shadow-xl">
-                Crafting Fashion Stories
-              </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a
-                  href="https://amilodzareg.etsy.com/"
-                  className="rounded-md bg-amber-500 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-                >
-                  Shop Now on Etsy
-                </a>
-                <a href="/contact" className="text-sm font-semibold leading-6 text-white">
-                  Contact Us <span aria-hidden="true">→</span>
-                </a>
+        <div className="relative isolate pt-14">
+          <div className="py-24 sm:py-32 lg:pb-40">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <div className="mx-auto max-w-2xl text-center">
+                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                  Amilod Zareg
+                </h1>
+                <p className="mt-6 text-lg leading-8 text-gray-600">
+                  Crafting Fashion Stories
+                </p>
+                <div className="mt-10 flex items-center justify-center gap-x-6">
+                  <a
+                    href="https://amilodzareg.etsy.com/"
+                    className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
+                  >
+                    Shop Now on Etsy
+                  </a>
+                  <a href="/contact" className="text-sm font-semibold leading-6 text-gray-900 p-2">
+                    Visit Our Atelier <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+              <div className="mt-16 flow-root sm:mt-24">
+                <StaticImage
+                  src="../images/hero.jpg"
+                  alt="Amilod Zareg"
+                  width={2432}
+                  height={1442}
+                  className="rounded-md shadow-2xl ring-1 ring-gray-900/10"
+                />
               </div>
             </div>
           </div>
@@ -46,7 +44,7 @@ const IndexPage = () => {
             aria-hidden="true"
           >
             <div
-              className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+              className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#fde68a] to-[#d97706] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
               style={{
                 clipPath:
                   'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
@@ -85,7 +83,7 @@ const IndexPage = () => {
             aria-hidden="true"
           >
             <div
-              className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+              className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#fde68a] to-[#d97706] opacity-30"
               style={{
                 clipPath:
                   'polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)',
@@ -158,23 +156,69 @@ const IndexPage = () => {
           </div>
         </div>
 
+
+        <div className="bg-white py-24 md:py-32 lg:py-40">
+          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+            <div className="mx-auto max-w-2xl lg:mx-0">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Unveiling Our Collections</h2>
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                Discover the essence of our brand through an exquisite array of meticulously curated collections, each a testament to our commitment to elegance, innovation, and unparalleled style. Explore and immerse yourself in the captivating world of our designs, where creativity meets craftsmanship.
+              </p>
+            </div>
+            <ul className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2">
+              <li>
+                <StaticImage className="aspect-[3/2] w-full rounded-2xl object-cover" src="../images/ss-alice/12.jpg" alt="Spring/Summer [Alice]" />
+                <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">Alice</h3>
+                <p className="text-base leading-7 text-gray-600">Spring/Summer</p>
+                <a href="/collection/ss-alice" className="mt-6 text-gray-400 hover:text-gray-500">
+                  View Collection <span aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <StaticImage className="aspect-[3/2] w-full rounded-2xl object-cover" src="../images/fw-roz/01.jpg" alt="Fall/Winter [Roz]" />
+                <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">Roz</h3>
+                <p className="text-base leading-7 text-gray-600">Fall/Winter</p>
+                <a href="/collection/fw-roz" className="mt-6 text-gray-400 hover:text-gray-500">
+                  View Collection <span aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <StaticImage className="aspect-[3/2] w-full rounded-2xl object-cover" src="../images/ss-boudoir/12.jpg" alt="Spring/Summer [Boudoir]" />
+                <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">Boudoir</h3>
+                <p className="text-base leading-7 text-gray-600">Spring/Summer</p>
+                <a href="/collection/ss-boudoir" className="mt-6 text-gray-400 hover:text-gray-500">
+                  View Collection <span aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <StaticImage className="aspect-[3/2] w-full rounded-2xl object-cover" src="../images/fw-hime/01.jpg" alt="Fall/Winter [Hime]" />
+                <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">Hime</h3>
+                <p className="text-base leading-7 text-gray-600">Fall/Winter</p>
+                <a href="/collection/fw-hime" className="mt-6 text-gray-400 hover:text-gray-500">
+                  View Collection <span aria-hidden="true">→</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div className="py-6 sm:py-8">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               <li>
                 <StaticImage className="aspect-square w-full rounded-2xl object-cover" src="../images/sweater-and-skirt.webp" alt="" />
                 <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">Sweater and skirt</h3>
-                <p className="text-base leading-7 text-gray-600">Knitted sweater with lace appliqué and asymmetrical skirt 💖</p>
+                <p className="text-base leading-7 text-gray-600">An intricately detailed knitted sweater, graced with delicate lace appliqué, paired harmoniously with an avant-garde asymmetrical skirt, offering a captivating blend of refined elegance and modern allure. 💖</p>
               </li>
               <li>
                 <StaticImage className="aspect-square w-full rounded-2xl object-cover" src="../images/pleated-dress.jpg" alt="" />
                 <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">Pleated dress</h3>
-                <p className="text-base leading-7 text-gray-600">An Amilod Zareg proposal for a special day 👗</p>
+                <p className="text-base leading-7 text-gray-600">An ethereal creation from the atelier, this pleated dress stands as an exquisite testament to elegance and grace, offering an unparalleled blend of timeless allure and contemporary chic. 👗</p>
               </li>
               <li>
                 <StaticImage className="aspect-square w-full rounded-2xl object-cover" src="../images/dress.webp" alt="" />
                 <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">Dress</h3>
-                <p className="text-base leading-7 text-gray-600">Because it's the little things that make all the difference ✨</p>
+                <p className="text-base leading-7 text-gray-600">This dress embodies the philosophy that perfection lies in the intricacies, accentuating its beauty and elegance, a testament to the belief that in fashion, it's the subtleties that create an extraordinary impact. ✨</p>
               </li>
             </ul>
           </div>
@@ -183,15 +227,15 @@ const IndexPage = () => {
         <div className="py-6 sm:py-8">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Made-to-measure Wedding Dresses</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Customized Elegance: Made-to-Measure Wedding Dresses</h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Is it your special day? Today you are the Star. You deserve a wedding dress that represents you and your unique style on this special day! Amilod Zareg will help you make this dream come true.
+                Embrace your moment in the spotlight with bespoke elegance tailored uniquely for you on your momentous day. At Amilod Zareg, we understand that your wedding day is a narrative of love and individuality, and your dress serves as the centerpiece, a reflection of your essence.
               </p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                From wedding dresses, mother of the bride, to party dresses, we can work together to achieve the look you want.
+                From the graceful bride's gown to attire befitting the mother of the bride and exquisite party dresses, our made-to-measure service crafts each garment to encapsulate your vision and celebrate your style.
               </p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Contact <a href="mailto:geral@amilodzareg.com">geral@amilodzareg.com</a> for more information and prices. We advise you to create the dress of your dreams a year before the big day.
+                Let us bring your dream dress to life — a collaboration where your ideas blend seamlessly with our expertise. Contact us at <a href="mailto:geral@amilodzareg.com">geral@amilodzareg.com</a> for comprehensive information and pricing. To ensure every intricate detail is perfected, we recommend initiating the creation of your custom dress at least a year before your momentous day.
               </p>
             </div>
           </div>
@@ -215,4 +259,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <title>Crafting Fashion Stories | Amilod Zareg</title>

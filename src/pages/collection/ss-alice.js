@@ -53,3 +53,5 @@ export default function SsAlicePage() {
         </div>
     </Layout>)
 }
+
+export const Head = () => <title>Spring/Summer Alice Collection | Amilod Zareg</title>

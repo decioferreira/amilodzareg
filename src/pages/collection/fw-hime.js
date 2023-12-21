@@ -43,3 +43,5 @@ export default function FwHimePage() {
         </div>
     </Layout>)
 }
+
+export const Head = () => <title>Fall/Winter Hime Collection | Amilod Zareg</title>

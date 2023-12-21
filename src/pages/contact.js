@@ -65,7 +65,7 @@ export default function ContactPage() {
                 <div className="mx-auto max-w-2xl space-y-16 divide-y divide-gray-100 lg:mx-0 lg:max-w-none">
                     <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
                         <div>
-                            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Our Studio Address</h2>
+                            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Our Atelier Address</h2>
                             <p className="mt-4 leading-7 text-gray-600">Visit us at:</p>
                             <a className="font-semibold text-amber-600" href="https://goo.gl/maps/ParyhgWRiumbwAtB8">
                                 <address className="mt-3 space-y-1 text-sm not-italic leading-6">
@@ -85,7 +85,7 @@ export default function ContactPage() {
                                 allowFullScreen=""
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                title="Our Studio Address - Google Maps"></iframe>
+                                title="Our Atelier Address - Google Maps"></iframe>
                         </div>
                     </div>
                     <div className="grid grid-cols-1 gap-x-8 gap-y-10 pt-16 lg:grid-cols-3">
@@ -148,3 +148,5 @@ export default function ContactPage() {
         </div>
     </Layout>)
 }
+
+export const Head = () => <title>Contact Us | Amilod Zareg</title>

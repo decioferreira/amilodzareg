@@ -28,8 +28,7 @@ const NotFoundPage = () => {
     <main style={pageStyles}>
       <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
+        Sorry 😔, we couldn't find what you were looking for.
         {process.env.NODE_ENV === "development" ? (
           <>
             <br />
@@ -46,4 +45,4 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = () => <title>Not found</title>
+export const Head = () => <title>Not Found | Amilod Zareg</title>

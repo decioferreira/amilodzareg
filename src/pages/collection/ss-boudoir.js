@@ -44,3 +44,5 @@ export default function SsBoudoirPage() {
         </div>
     </Layout>)
 }
+
+export const Head = () => <title>Spring/Summer Boudoir Collection | Amilod Zareg</title>

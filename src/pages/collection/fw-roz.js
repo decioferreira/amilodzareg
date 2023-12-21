@@ -43,3 +43,5 @@ export default function FwRozPage() {
         </div>
     </Layout>)
 }
+
+export const Head = () => <title>Fall/Winter Roz Collection | Amilod Zareg</title>

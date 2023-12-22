@@ -1,5 +1,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
+import { Translate } from "gatsby-plugin-translate"
 
 const socialMedias = [
     {
@@ -59,15 +60,15 @@ const socialMedias = [
 ]
 
 export default function ContactPage() {
-    return (<Layout>
+    return (<Layout currentPage="contact">
         <div className="bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl space-y-16 divide-y divide-gray-100 lg:mx-0 lg:max-w-none">
                     <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
                         <div>
-                            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Our Atelier Address</h2>
-                            <p className="mt-4 leading-7 text-gray-600">Visit us at:</p>
-                            <a className="font-semibold text-amber-600" href="https://goo.gl/maps/ParyhgWRiumbwAtB8">
+                            <h2 className="text-3xl font-bold tracking-tight text-gray-900"><Translate id="contact.our_atelier_address" /></h2>
+                            <p className="mt-4 leading-7 text-gray-600"><Translate id="contact.visit_us_at" />:</p>
+                            <a className="font-semibold text-amber-600 hover:text-amber-500" href="https://goo.gl/maps/ParyhgWRiumbwAtB8">
                                 <address className="mt-3 space-y-1 text-sm not-italic leading-6">
                                     <p>Rua de Brito Capelo, 27</p>
                                     <p>4050-130 Porto</p>
@@ -90,17 +91,17 @@ export default function ContactPage() {
                     </div>
                     <div className="grid grid-cols-1 gap-x-8 gap-y-10 pt-16 lg:grid-cols-3">
                         <div>
-                            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Contacts</h2>
+                            <h2 className="text-3xl font-bold tracking-tight text-gray-900"><Translate id="contact.contacts" /></h2>
                             <p className="mt-4 leading-7 text-gray-600">
-                                You can also send us a message on <a className="font-semibold text-amber-600" href="https://www.facebook.com/amilodzareg">facebook</a> or <a className="font-semibold text-amber-600" href="https://www.instagram.com/amilodzareg">instagram</a>.
+                                <Translate id="contact.send_us_a_message_01" /> <a className="font-semibold text-amber-600 hover:text-amber-500" href="https://www.facebook.com/amilodzareg">Facebook</a> <Translate id="contact.send_us_a_message_or" /> <a className="font-semibold text-amber-600 hover:text-amber-500" href="https://www.instagram.com/amilodzareg">Instagram</a>.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
                             <div className="rounded-2xl bg-gray-50 p-10">
                                 <dl className="mt-3 space-y-1 text-sm leading-6 text-gray-600">
-                                    <dt className="text-base font-semibold leading-7 text-gray-900">Email</dt>
+                                    <dt className="text-base font-semibold leading-7 text-gray-900"><Translate id="contact.email" /></dt>
                                     <dd>
-                                        <a className="font-semibold text-amber-600" href="mailto:geral@amilodzareg.com">
+                                        <a className="font-semibold text-amber-600 hover:text-amber-500" href="mailto:geral@amilodzareg.com">
                                             geral@amilodzareg.com
                                         </a>
                                     </dd>
@@ -108,9 +109,9 @@ export default function ContactPage() {
                             </div>
                             <div className="rounded-2xl bg-gray-50 p-10">
                                 <dl className="mt-3 space-y-1 text-sm leading-6 text-gray-600">
-                                    <dt className="text-base font-semibold leading-7 text-gray-900">Telephone</dt>
+                                    <dt className="text-base font-semibold leading-7 text-gray-900"><Translate id="contact.telephone" /></dt>
                                     <dd>
-                                        <a className="font-semibold text-amber-600" href="tel:00351915056837">
+                                        <a className="font-semibold text-amber-600 hover:text-amber-500" href="tel:00351915056837">
                                             (+351) 91 505 68 37
                                         </a>
                                     </dd>
@@ -120,21 +121,21 @@ export default function ContactPage() {
                     </div>
                     <div className="grid grid-cols-1 gap-x-8 gap-y-10 pt-16 lg:grid-cols-3">
                         <div>
-                            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Follow Us Online</h2>
+                            <h2 className="text-3xl font-bold tracking-tight text-gray-900"><Translate id="contact.follow_us_online" /></h2>
                             <p className="mt-4 leading-7 text-gray-600">
-                                Discover our world on social media! Get an exclusive look into our latest collections, style tips, and more. Connect with us to be part of our vibrant community.
+                                <Translate id="contact.follow_us_online_description" />
                             </p>
                         </div>
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
                             {socialMedias.map((item) => (
-                                <div className="rounded-2xl bg-gray-50 p-10">
+                                <div key={item.name} className="rounded-2xl bg-gray-50 p-10">
                                     <dl className="mt-3 space-y-1 text-sm leading-6 text-gray-600">
                                         <dt className="inline-flex items-center gap-x-1 text-base font-semibold leading-7 text-gray-900">
                                             <item.icon className="h-6 w-6" aria-hidden="true" />
                                             <span>{item.name}</span>
                                         </dt>
                                         <dd>
-                                            <a className="font-semibold text-amber-600" href={item.href}>
+                                            <a className="font-semibold text-amber-600 hover:text-amber-500" href={item.href}>
                                                 {item.description}
                                             </a>
                                         </dd>
@@ -149,4 +150,4 @@ export default function ContactPage() {
     </Layout>)
 }
 
-export const Head = () => <title>Contact Us | Amilod Zareg</title>
+export const Head = () => <title><Translate id="contact.title" /></title>

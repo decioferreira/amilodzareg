@@ -26,5 +26,12 @@ module.exports = {
         "path": "./src/images/"
       },
       __key: "images"
+    },
+    {
+      resolve: `gatsby-plugin-translate`,
+      options: {
+        sourceLanguage: 'pt',
+        targetLanguages: ['pt', 'en']
+      }
     }]
 };

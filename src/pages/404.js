@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { TranslateLink } from "gatsby-plugin-translate"
 
 const pageStyles = {
   color: "#232129",
@@ -37,7 +37,7 @@ const NotFoundPage = () => {
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <TranslateLink to="/">Go home</TranslateLink>.
       </p>
     </main>
   )

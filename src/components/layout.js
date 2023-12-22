@@ -2,12 +2,13 @@ import React, { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { LanguageSelector, Translate, TranslateLink, useTranslateContext } from 'gatsby-plugin-translate'
 
 const collections = [
-    { name: 'Spring/Summer [Alice]', description: 'Alice Collection Spring/Summer', href: '/collection/ss-alice' },
-    { name: 'Fall/Winter [Roz]', description: 'Roz Collection Fall/Winter', href: '/collection/fw-roz' },
-    { name: 'Spring/Summer [Boudoir]', description: 'Boudoir Collection Spring/Summer', href: '/collection/ss-boudoir' },
-    { name: 'Fall/Winter [Hime]', description: 'Hime Collection Fall/Winter', href: '/collection/fw-hime' },
+    { page: "collection_alice", name: "layout.ss_alice_name", to: '/collection/ss-alice' },
+    { page: "collection_roz", name: "layout.fw_roz_name", to: '/collection/fw-roz' },
+    { page: "collection_boudoir", name: 'layout.ss_boudoir_name', to: '/collection/ss-boudoir' },
+    { page: "collection_hime", name: 'layout.fw_hime_name', to: '/collection/fw-hime' },
 ]
 
 function classNames(...classes) {
@@ -67,20 +68,21 @@ const navigation = [
 ]
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children, currentPage }) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const { language } = useTranslateContext()
 
     return (
         <>
             <header className="bg-white">
                 <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                     <div className="flex lg:flex-1">
-                        <a href="/" className="-m-1.5 p-1.5">
+                        <TranslateLink to="/" className={`-m-1.5 p-1.5 ${currentPage === "index" ? "text-amber-600" : "text-gray-900"} hover:text-amber-500`}>
                             <span className="sr-only">Amilod Zareg</span>
                             <svg className="h-8 w-auto" viewBox="0 0 20 30">
-                                <path d="M 2.757 0 L 2.951 0.509 L 3.845 2.857 L 2.857 2.857 L 1.429 2.857 L 0 2.857 L 0 4.286 L 0 7.143 L 0 8.571 L 2.857 8.571 L 2.857 7.143 L 2.857 5.714 L 4.934 5.714 L 8.374 14.745 L 0.313 24.822 L 1.429 27.143 L 13.097 27.143 L 14.186 30 L 17.243 30 L 17.049 29.491 L 16.155 27.143 L 18.571 27.143 L 20 27.143 L 20 25.714 L 20 22.857 L 20 21.429 L 17.143 21.429 L 17.143 22.857 L 17.143 24.286 L 4.401 24.286 L 19.687 5.178 L 18.571 2.857 L 6.903 2.857 L 5.815 0 L 2.757 0 Z M 7.991 5.714 L 15.599 5.714 L 10.445 12.157 L 7.991 5.714 Z" />
+                                <path fill="currentColor" d="M 2.757 0 L 2.951 0.509 L 3.845 2.857 L 2.857 2.857 L 1.429 2.857 L 0 2.857 L 0 4.286 L 0 7.143 L 0 8.571 L 2.857 8.571 L 2.857 7.143 L 2.857 5.714 L 4.934 5.714 L 8.374 14.745 L 0.313 24.822 L 1.429 27.143 L 13.097 27.143 L 14.186 30 L 17.243 30 L 17.049 29.491 L 16.155 27.143 L 18.571 27.143 L 20 27.143 L 20 25.714 L 20 22.857 L 20 21.429 L 17.143 21.429 L 17.143 22.857 L 17.143 24.286 L 4.401 24.286 L 19.687 5.178 L 18.571 2.857 L 6.903 2.857 L 5.815 0 L 2.757 0 Z M 7.991 5.714 L 15.599 5.714 L 10.445 12.157 L 7.991 5.714 Z" />
                             </svg>
-                        </a>
+                        </TranslateLink>
                     </div>
                     <div className="flex lg:hidden">
                         <button
@@ -88,15 +90,15 @@ const Layout = ({ children }) => {
                             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
                             onClick={() => setMobileMenuOpen(true)}
                         >
-                            <span className="sr-only">Open main menu</span>
+                            <span className="sr-only"><Translate id="layout.open_main_menu" /></span>
                             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                         </button>
                     </div>
 
                     <Popover.Group className="hidden lg:flex lg:gap-x-10">
                         <Popover className="relative">
-                            <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 p-2">
-                                <span>Collections</span>
+                            <Popover.Button className={`inline-flex items-center gap-x-1 text-sm font-semibold leading-6 ${currentPage.startsWith("collection_") ? "text-amber-600" : "text-gray-900"} hover:text-amber-500 p-2`}>
+                                <span><Translate id="layout.collections" /></span>
                                 <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
                             </Popover.Button>
 
@@ -112,39 +114,42 @@ const Layout = ({ children }) => {
                                 <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-min -translate-x-1/2 px-4">
                                     <div className="w-56 shrink rounded-xl bg-white p-4 text-sm font-semibold leading-6 text-gray-900 shadow-lg ring-1 ring-gray-900/5">
                                         {collections.map((item) => (
-                                            <a key={item.name} href={item.href} className="block p-2 hover:text-amber-600">
-                                                {item.name}
-                                            </a>
+                                            <TranslateLink key={item.name} to={item.to} className={`block p-2 ${currentPage === item.page ? "text-amber-600" : "text-gray-900"} hover:text-amber-500`}>
+                                                <Translate id={item.name} />
+                                            </TranslateLink>
                                         ))}
                                     </div>
                                 </Popover.Panel>
                             </Transition>
                         </Popover>
 
-                        <a href="/about" className="text-sm font-semibold leading-6 text-gray-900 p-2">
-                            About Us
-                        </a>
-                        <a href="/contact" className="text-sm font-semibold leading-6 text-gray-900 p-2">
-                            Contact Us
-                        </a>
+                        <TranslateLink to="/about" className={`text-sm font-semibold leading-6 ${currentPage === "about" ? "text-amber-600" : "text-gray-900"} hover:text-amber-500 p-2`}>
+                            <Translate id="layout.about_us" />
+                        </TranslateLink>
+                        <TranslateLink to="/contact" className={`text-sm font-semibold leading-6 ${currentPage === "contact" ? "text-amber-600" : "text-gray-900"} hover:text-amber-500 p-2`}>
+                            <Translate id="layout.contact_us" />
+                        </TranslateLink>
+                        {language === "pt" ?
+                            <LanguageSelector className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-500 p-2" language="en">EN 🇬🇧</LanguageSelector> :
+                            <LanguageSelector className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-500 p-2" language="pt">PT 🇵🇹</LanguageSelector>}
                     </Popover.Group>
                 </nav>
                 <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                     <div className="fixed inset-0 z-10" />
                     <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between">
-                            <a href="/" className="-m-1.5 p-1.5">
+                            <TranslateLink to="/" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Amilod Zareg</span>
                                 <svg className="h-8 w-auto" viewBox="0 0 20 30">
                                     <path d="M 2.757 0 L 2.951 0.509 L 3.845 2.857 L 2.857 2.857 L 1.429 2.857 L 0 2.857 L 0 4.286 L 0 7.143 L 0 8.571 L 2.857 8.571 L 2.857 7.143 L 2.857 5.714 L 4.934 5.714 L 8.374 14.745 L 0.313 24.822 L 1.429 27.143 L 13.097 27.143 L 14.186 30 L 17.243 30 L 17.049 29.491 L 16.155 27.143 L 18.571 27.143 L 20 27.143 L 20 25.714 L 20 22.857 L 20 21.429 L 17.143 21.429 L 17.143 22.857 L 17.143 24.286 L 4.401 24.286 L 19.687 5.178 L 18.571 2.857 L 6.903 2.857 L 5.815 0 L 2.757 0 Z M 7.991 5.714 L 15.599 5.714 L 10.445 12.157 L 7.991 5.714 Z" />
                                 </svg>
-                            </a>
+                            </TranslateLink>
                             <button
                                 type="button"
                                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
-                                <span className="sr-only">Close menu</span>
+                                <span className="sr-only"><Translate id="layout.close_menu" /></span>
                                 <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                             </button>
                         </div>
@@ -155,7 +160,7 @@ const Layout = ({ children }) => {
                                         {({ open }) => (
                                             <>
                                                 <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                                                    Collections
+                                                    <Translate id="layout.collections" />
                                                     <ChevronDownIcon
                                                         className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                                                         aria-hidden="true"
@@ -166,28 +171,31 @@ const Layout = ({ children }) => {
                                                         <Disclosure.Button
                                                             key={item.name}
                                                             as="a"
-                                                            href={item.href}
+                                                            href={item.to}
                                                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                                         >
-                                                            {item.name}
+                                                            <Translate id={item.name} />
                                                         </Disclosure.Button>
                                                     ))}
                                                 </Disclosure.Panel>
                                             </>
                                         )}
                                     </Disclosure>
-                                    <a
-                                        href="/about"
+                                    <TranslateLink
+                                        to="/about"
                                         className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                     >
-                                        About Us
-                                    </a>
-                                    <a
-                                        href="/contact"
+                                        <Translate id="layout.about_us" />
+                                    </TranslateLink>
+                                    <TranslateLink
+                                        to="/contact"
                                         className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                     >
-                                        Contact Us
-                                    </a>
+                                        <Translate id="layout.contact_us" />
+                                    </TranslateLink>
+                                    {language === "pt" ?
+                                        <LanguageSelector className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" language="en">EN 🇬🇧</LanguageSelector> :
+                                        <LanguageSelector className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" language="pt">PT 🇵🇹</LanguageSelector>}
                                 </div>
                             </div>
                         </div>
@@ -209,7 +217,7 @@ const Layout = ({ children }) => {
                     </div>
                     <div className="mt-8 md:order-1 md:mt-0">
                         <p className="text-center text-xs leading-5 text-gray-500">
-                            &copy; {new Date().getFullYear()} Amilod Zareg, Inc. All rights reserved.
+                            &copy; {new Date().getFullYear()} <Translate id="layout.copyright_text" />
                         </p>
                     </div>
                 </div>

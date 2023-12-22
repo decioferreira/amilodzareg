@@ -1,10 +1,13 @@
 import * as React from 'react'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
+import { Translate, TranslateLink, useTranslations } from 'gatsby-plugin-translate'
 
 const IndexPage = () => {
+  const t = useTranslations()
+
   return (
-    <Layout>
+    <Layout currentPage="index">
       <main className="isolate">
         <div className="relative isolate pt-14">
           <div className="py-24 sm:py-32 lg:pb-40">
@@ -14,18 +17,18 @@ const IndexPage = () => {
                   Amilod Zareg
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                  Crafting Fashion Stories
+                  <Translate id="index.slogan" />
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <a
                     href="https://amilodzareg.etsy.com/"
                     className="rounded-md bg-amber-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
                   >
-                    Shop Now on Etsy
+                    <Translate id="index.shop_now_on_etsy" />
                   </a>
-                  <a href="/contact" className="text-sm font-semibold leading-6 text-gray-900 p-2">
-                    Visit Our Atelier <span aria-hidden="true">→</span>
-                  </a>
+                  <TranslateLink to="/contact" className="text-sm font-semibold leading-6 text-gray-900 p-2">
+                    <Translate id="index.visit_our_atelier" /> <span aria-hidden="true">→</span>
+                  </TranslateLink>
                 </div>
               </div>
               <div className="mt-16 flow-root sm:mt-24">
@@ -95,12 +98,10 @@ const IndexPage = () => {
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                    Where Design Meets Passion
+                    <Translate id="index.where_design_meets_passion" />
                   </h1>
                   <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                    Welcome to Amilod Zareg, where design meets imagination in a seamless blend of
-                    artistry and elegance. We craft more than just garments; we curate stories woven
-                    with passion, precision, and an unwavering commitment to individuality.
+                    <Translate id="index.where_design_meets_passion_description" />
                   </p>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
@@ -108,7 +109,7 @@ const IndexPage = () => {
                     <div className="relative">
                       <StaticImage
                         src="../images/fw-hime/01.jpg"
-                        alt=""
+                        alt={t`index.hime_collection`}
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -118,7 +119,7 @@ const IndexPage = () => {
                     <div className="relative">
                       <StaticImage
                         src="../images/ss-boudoir/10.jpg"
-                        alt=""
+                        alt={t`index.boudoir_collection`}
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -126,7 +127,7 @@ const IndexPage = () => {
                     <div className="relative">
                       <StaticImage
                         src="../images/fw-roz/03.jpg"
-                        alt=""
+                        alt={t`index.roz_collection`}
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -136,7 +137,7 @@ const IndexPage = () => {
                     <div className="relative">
                       <StaticImage
                         src="../images/ss-alice/21.jpg"
-                        alt=""
+                        alt={t`index.alice_collection`}
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -144,7 +145,7 @@ const IndexPage = () => {
                     <div className="relative">
                       <StaticImage
                         src="../images/fw-hime/04.jpg"
-                        alt=""
+                        alt={t`index.hime_collection`}
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -156,47 +157,46 @@ const IndexPage = () => {
           </div>
         </div>
 
-
         <div className="bg-white py-24 md:py-32 lg:py-40">
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
             <div className="mx-auto max-w-2xl lg:mx-0">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Unveiling Our Collections</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"><Translate id="index.unveiling_our_collections" /></h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Discover the essence of our brand through an exquisite array of meticulously curated collections, each a testament to our commitment to elegance, innovation, and unparalleled style. Explore and immerse yourself in the captivating world of our designs, where creativity meets craftsmanship.
+                <Translate id="index.discover_essence_our_brand" />
               </p>
             </div>
             <ul className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2">
               <li>
-                <StaticImage className="aspect-[3/2] w-full rounded-2xl object-cover" src="../images/ss-alice/12.jpg" alt="Spring/Summer [Alice]" />
+                <StaticImage className="aspect-[3/2] w-full rounded-2xl object-cover" src="../images/ss-alice/12.jpg" alt={t`index.ss_alice_name`} />
                 <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">Alice</h3>
-                <p className="text-base leading-7 text-gray-600">Spring/Summer</p>
-                <a href="/collection/ss-alice" className="mt-6 text-gray-400 hover:text-gray-500">
-                  View Collection <span aria-hidden="true">→</span>
-                </a>
+                <p className="text-base leading-7 text-gray-600"><Translate id="index.spring_summer" /></p>
+                <TranslateLink to="/collection/ss-alice" className="mt-6 text-amber-600 hover:text-amber-500">
+                  <Translate id="index.view_collection" /> <span aria-hidden="true">→</span>
+                </TranslateLink>
               </li>
               <li>
-                <StaticImage className="aspect-[3/2] w-full rounded-2xl object-cover" src="../images/fw-roz/01.jpg" alt="Fall/Winter [Roz]" />
+                <StaticImage className="aspect-[3/2] w-full rounded-2xl object-cover" src="../images/fw-roz/01.jpg" alt={t`index.fw_roz_name`} />
                 <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">Roz</h3>
-                <p className="text-base leading-7 text-gray-600">Fall/Winter</p>
-                <a href="/collection/fw-roz" className="mt-6 text-gray-400 hover:text-gray-500">
-                  View Collection <span aria-hidden="true">→</span>
-                </a>
+                <p className="text-base leading-7 text-gray-600"><Translate id="index.fall_winter" /></p>
+                <TranslateLink to="/collection/fw-roz" className="mt-6 text-amber-600 hover:text-amber-500">
+                  <Translate id="index.view_collection" /> <span aria-hidden="true">→</span>
+                </TranslateLink>
               </li>
               <li>
-                <StaticImage className="aspect-[3/2] w-full rounded-2xl object-cover" src="../images/ss-boudoir/12.jpg" alt="Spring/Summer [Boudoir]" />
+                <StaticImage className="aspect-[3/2] w-full rounded-2xl object-cover" src="../images/ss-boudoir/12.jpg" alt={t`index.ss_boudoir_name`} />
                 <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">Boudoir</h3>
-                <p className="text-base leading-7 text-gray-600">Spring/Summer</p>
-                <a href="/collection/ss-boudoir" className="mt-6 text-gray-400 hover:text-gray-500">
-                  View Collection <span aria-hidden="true">→</span>
-                </a>
+                <p className="text-base leading-7 text-gray-600"><Translate id="index.spring_summer" /></p>
+                <TranslateLink to="/collection/ss-boudoir" className="mt-6 text-amber-600 hover:text-amber-500">
+                  <Translate id="index.view_collection" /> <span aria-hidden="true">→</span>
+                </TranslateLink>
               </li>
               <li>
-                <StaticImage className="aspect-[3/2] w-full rounded-2xl object-cover" src="../images/fw-hime/01.jpg" alt="Fall/Winter [Hime]" />
+                <StaticImage className="aspect-[3/2] w-full rounded-2xl object-cover" src="../images/fw-hime/01.jpg" alt={t`index.fw_hime_name`} />
                 <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">Hime</h3>
-                <p className="text-base leading-7 text-gray-600">Fall/Winter</p>
-                <a href="/collection/fw-hime" className="mt-6 text-gray-400 hover:text-gray-500">
-                  View Collection <span aria-hidden="true">→</span>
-                </a>
+                <p className="text-base leading-7 text-gray-600"><Translate id="index.fall_winter" /></p>
+                <TranslateLink to="/collection/fw-hime" className="mt-6 text-amber-600 hover:text-amber-500">
+                  <Translate id="index.view_collection" /> <span aria-hidden="true">→</span>
+                </TranslateLink>
               </li>
             </ul>
           </div>
@@ -206,19 +206,19 @@ const IndexPage = () => {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               <li>
-                <StaticImage className="aspect-square w-full rounded-2xl object-cover" src="../images/sweater-and-skirt.webp" alt="" />
-                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">Sweater and skirt</h3>
-                <p className="text-base leading-7 text-gray-600">An intricately detailed knitted sweater, graced with delicate lace appliqué, paired harmoniously with an avant-garde asymmetrical skirt, offering a captivating blend of refined elegance and modern allure. 💖</p>
+                <StaticImage className="aspect-square w-full rounded-2xl object-cover" src="../images/sweater-and-skirt.webp" alt={t`index.sweater_skirt`} />
+                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900"><Translate id="index.sweater_skirt" /></h3>
+                <p className="text-base leading-7 text-gray-600"><Translate id="index.sweater_skirt_description" /> 💖</p>
               </li>
               <li>
-                <StaticImage className="aspect-square w-full rounded-2xl object-cover" src="../images/pleated-dress.jpg" alt="" />
-                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">Pleated dress</h3>
-                <p className="text-base leading-7 text-gray-600">An ethereal creation from the atelier, this pleated dress stands as an exquisite testament to elegance and grace, offering an unparalleled blend of timeless allure and contemporary chic. 👗</p>
+                <StaticImage className="aspect-square w-full rounded-2xl object-cover" src="../images/pleated-dress.jpg" alt={t`index.pleated_dress`} />
+                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900"><Translate id="index.pleated_dress" /></h3>
+                <p className="text-base leading-7 text-gray-600"><Translate id="index.pleated_dress_description" /> 👗</p>
               </li>
               <li>
-                <StaticImage className="aspect-square w-full rounded-2xl object-cover" src="../images/dress.webp" alt="" />
-                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">Dress</h3>
-                <p className="text-base leading-7 text-gray-600">This dress embodies the philosophy that perfection lies in the intricacies, accentuating its beauty and elegance, a testament to the belief that in fashion, it's the subtleties that create an extraordinary impact. ✨</p>
+                <StaticImage className="aspect-square w-full rounded-2xl object-cover" src="../images/dress.webp" alt={t`index.dress`} />
+                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900"><Translate id="index.dress" /></h3>
+                <p className="text-base leading-7 text-gray-600"><Translate id="index.dress_description" /> ✨</p>
               </li>
             </ul>
           </div>
@@ -227,28 +227,31 @@ const IndexPage = () => {
         <div className="py-6 sm:py-8">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Customized Elegance: Made-to-Measure Wedding Dresses</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"><Translate id="index.made_to_measure_wedding_dresses" /></h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Embrace your moment in the spotlight with bespoke elegance tailored uniquely for you on your momentous day. At Amilod Zareg, we understand that your wedding day is a narrative of love and individuality, and your dress serves as the centerpiece, a reflection of your essence.
+                <Translate id="index.made_to_measure_wedding_dresses_01" />
               </p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                From the graceful bride's gown to attire befitting the mother of the bride and exquisite party dresses, our made-to-measure service crafts each garment to encapsulate your vision and celebrate your style.
+                <Translate id="index.made_to_measure_wedding_dresses_02" />
               </p>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Let us bring your dream dress to life — a collaboration where your ideas blend seamlessly with our expertise. Contact us at <a href="mailto:geral@amilodzareg.com">geral@amilodzareg.com</a> for comprehensive information and pricing. To ensure every intricate detail is perfected, we recommend initiating the creation of your custom dress at least a year before your momentous day.
+                <Translate id="index.made_to_measure_wedding_dresses_03_01" /> <a className="text-amber-600 hover:text-amber-500" href="mailto:geral@amilodzareg.com">geral@amilodzareg.com</a> <Translate id="index.made_to_measure_wedding_dresses_03_02" />
+              </p>
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                <Translate id="index.made_to_measure_wedding_dresses_04" /> <a className="text-amber-600 hover:text-amber-500" href="https://www.casamentos.pt/atelier-noiva/amilod-zareg--e147575">casamentos.pt</a>.
               </p>
             </div>
           </div>
 
           <ul className="mx-auto mt-20 grid grid-cols-1 sm:mx-0 sm:max-w-none sm:grid-cols-3" >
             <li>
-              <StaticImage className="aspect-square w-full object-cover" src="../images/wedding-01.jpg" alt="" />
+              <StaticImage className="aspect-square w-full object-cover" src="../images/wedding-01.jpg" alt={t`index.wedding_dress`} />
             </li>
             <li>
-              <StaticImage className="aspect-square w-full object-cover" src="../images/wedding-02.jpg" alt="" />
+              <StaticImage className="aspect-square w-full object-cover" src="../images/wedding-02.jpg" alt={t`index.wedding_dress`} />
             </li>
             <li>
-              <StaticImage className="aspect-square w-full object-cover" src="../images/wedding-03.jpg" alt="" />
+              <StaticImage className="aspect-square w-full object-cover" src="../images/wedding-03.jpg" alt={t`index.wedding_dress`} />
             </li>
           </ul>
         </div>
@@ -259,4 +262,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Crafting Fashion Stories | Amilod Zareg</title>
+export const Head = () => <title><Translate id="index.title" /></title>

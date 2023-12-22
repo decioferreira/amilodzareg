@@ -9,7 +9,7 @@ module.exports = {
   plugins: ["gatsby-plugin-postcss", {
     resolve: `gatsby-plugin-google-gtag`,
     options: {
-      trackingIds: ['G-ABC123'],
+      trackingIds: ['UA-5787549-1'],
       pluginConfig: {
         head: true
       }

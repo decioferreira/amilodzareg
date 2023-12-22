@@ -1,4 +1,4 @@
-const webpack = require("webpack")
+const webpack = require("webpack");
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -7,5 +7,5 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         process: "process/browser",
       }),
     ],
-  })
-}
+  });
+};

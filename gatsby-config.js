@@ -4,34 +4,43 @@
 module.exports = {
   siteMetadata: {
     title: `Amilod Zareg`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: ["gatsby-plugin-postcss", {
-    resolve: `gatsby-plugin-google-gtag`,
-    options: {
-      trackingIds: ['UA-5787549-1'],
-      pluginConfig: {
-        head: true
-      }
-    }
-  }, "gatsby-plugin-image", "gatsby-plugin-sitemap", {
-      resolve: 'gatsby-plugin-manifest',
+  plugins: [
+    "gatsby-plugin-postcss",
+    {
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        "icon": "src/images/icon.png"
-      }
-    }, "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "images",
-        "path": "./src/images/"
+        trackingIds: ["UA-5787549-1"],
+        pluginConfig: {
+          head: true,
+        },
       },
-      __key: "images"
+    },
+    "gatsby-plugin-image",
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/icon.png",
+      },
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./src/images/",
+      },
+      __key: "images",
     },
     {
       resolve: `gatsby-plugin-translate`,
       options: {
-        sourceLanguage: 'pt',
-        targetLanguages: ['pt', 'en']
-      }
-    }]
+        sourceLanguage: "pt",
+        targetLanguages: ["pt", "en"],
+      },
+    },
+  ],
 };

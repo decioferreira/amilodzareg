@@ -12,7 +12,7 @@ export default function FwHimePage() {
 
   return (
     <Layout currentPage="collection_hime">
-      <div className="bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <div className="px-6 py-6 sm:py-8 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h3 className="text-base font-semibold leading-7 text-gray-900">
             Fall/Winter
@@ -20,7 +20,72 @@ export default function FwHimePage() {
           <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
             Hime
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="columns-2 md:columns-3 gap-4">
+          <StaticImage
+            className="h-auto max-w-full rounded-lg mb-4"
+            src="../../images/fw-hime/01.jpg"
+            alt={t`collections.fw_hime`}
+          />
+          <StaticImage
+            className="h-auto w-full rounded-lg mb-4"
+            src="../../images/fw-hime/02.jpg"
+            alt={t`collections.fw_hime`}
+          />
+          <StaticImage
+            className="h-auto w-full rounded-lg mb-4"
+            src="../../images/fw-hime/03.jpg"
+            alt={t`collections.fw_hime`}
+          />
+          <StaticImage
+            className="h-auto w-full rounded-lg mb-4"
+            src="../../images/fw-hime/04.jpg"
+            alt={t`collections.fw_hime`}
+          />
+          <StaticImage
+            className="h-auto w-full rounded-lg mb-4 aspect-[298/447]"
+            src="../../images/fw-hime/05.jpg"
+            alt={t`collections.fw_hime`}
+          />
+          <StaticImage
+            className="h-auto max-w-full rounded-lg mb-4"
+            src="../../images/fw-hime/06.jpg"
+            alt={t`collections.fw_hime`}
+          />
+          <StaticImage
+            className="h-auto w-full rounded-lg mb-4"
+            src="../../images/fw-hime/07.jpg"
+            alt={t`collections.fw_hime`}
+          />
+          <StaticImage
+            className="h-auto w-full rounded-lg mb-4"
+            src="../../images/fw-hime/08.jpg"
+            alt={t`collections.fw_hime`}
+          />
+          <StaticImage
+            className="h-auto w-full rounded-lg mb-4"
+            src="../../images/fw-hime/09.jpg"
+            alt={t`collections.fw_hime`}
+          />
+          <StaticImage
+            className="h-auto w-full rounded-lg mb-4"
+            src="../../images/fw-hime/10.jpg"
+            alt={t`collections.fw_hime`}
+          />
+          <StaticImage
+            className="h-auto max-w-full rounded-lg mb-4"
+            src="../../images/fw-hime/11.jpg"
+            alt={t`collections.fw_hime`}
+          />
+        </div>
+      </div>
+
+      <div className="px-6 py-6 sm:py-8 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-lg leading-8 text-gray-600">
             Amilod Zareg by{" "}
             <TranslateLink
               to="/about#Designer_Marlene_Torres"
@@ -40,7 +105,7 @@ export default function FwHimePage() {
               Filipe Santos
             </a>
             <br />
-            <Translate id="collections.stylist" /> Augusto Soares
+            <Translate id="collections.styling" /> Augusto Soares
             <br />
             <Translate id="collections.hairdresser" />{" "}
             <a
@@ -75,66 +140,6 @@ export default function FwHimePage() {
               Palacete Pinto Leite
             </a>
           </p>
-        </div>
-      </div>
-
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="columns-2 md:columns-3 gap-4">
-          <StaticImage
-            className="h-auto max-w-full rounded-lg mb-4"
-            src="../../images/fw-hime/01.jpg"
-            alt={t`collections.fw_hime`}
-          />
-          <StaticImage
-            className="h-auto w-full rounded-lg mb-4"
-            src="../../images/fw-hime/02.jpg"
-            alt={t`collections.fw_hime`}
-          />
-          <StaticImage
-            className="h-auto w-full rounded-lg mb-4"
-            src="../../images/fw-hime/03.jpg"
-            alt={t`collections.fw_hime`}
-          />
-          <StaticImage
-            className="h-auto w-full rounded-lg mb-4"
-            src="../../images/fw-hime/04.jpg"
-            alt={t`collections.fw_hime`}
-          />
-          <StaticImage
-            className="h-auto w-full rounded-lg mb-4"
-            src="../../images/fw-hime/05.jpg"
-            alt={t`collections.fw_hime`}
-          />
-          <StaticImage
-            className="h-auto max-w-full rounded-lg mb-4"
-            src="../../images/fw-hime/06.jpg"
-            alt={t`collections.fw_hime`}
-          />
-          <StaticImage
-            className="h-auto w-full rounded-lg mb-4"
-            src="../../images/fw-hime/07.jpg"
-            alt={t`collections.fw_hime`}
-          />
-          <StaticImage
-            className="h-auto w-full rounded-lg mb-4"
-            src="../../images/fw-hime/08.jpg"
-            alt={t`collections.fw_hime`}
-          />
-          <StaticImage
-            className="h-auto w-full rounded-lg mb-4"
-            src="../../images/fw-hime/09.jpg"
-            alt={t`collections.fw_hime`}
-          />
-          <StaticImage
-            className="h-auto w-full rounded-lg mb-4"
-            src="../../images/fw-hime/10.jpg"
-            alt={t`collections.fw_hime`}
-          />
-          <StaticImage
-            className="h-auto max-w-full rounded-lg mb-4"
-            src="../../images/fw-hime/11.jpg"
-            alt={t`collections.fw_hime`}
-          />
         </div>
       </div>
     </Layout>

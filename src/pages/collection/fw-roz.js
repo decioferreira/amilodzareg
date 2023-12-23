@@ -12,7 +12,7 @@ export default function FwRozPage() {
 
   return (
     <Layout currentPage="collection_roz">
-      <div className="bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <div className="px-6 py-6 sm:py-8 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h3 className="text-base font-semibold leading-7 text-gray-900">
             <Translate id="collections.fall_winter" />
@@ -20,53 +20,6 @@ export default function FwRozPage() {
           <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
             Roz
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Amilod Zareg by{" "}
-            <TranslateLink
-              to="/about#Designer_Marlene_Torres"
-              className="text-amber-600 hover:text-amber-500"
-            >
-              Marlene Torres
-            </TranslateLink>
-            :
-            <br />
-            <Translate id="collections.photographer_female" />{" "}
-            <a
-              className="text-amber-600 hover:text-amber-500"
-              href="http://www.flickr.com/photos/misscartier/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Miss Cartier
-            </a>
-            <br />
-            <Translate id="collections.stylist" /> Amilod Zareg
-            <br />
-            <Translate id="collections.hairdresser" />{" "}
-            <a
-              className="text-amber-600 hover:text-amber-500"
-              href="https://www.facebook.com/hairidentityporto"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Rute Hair Identity
-            </a>
-            <br />
-            <Translate id="collections.make_up_artist" />{" "}
-            <a
-              className="text-amber-600 hover:text-amber-500"
-              href="http://ritasilvamakeupartist.blogspot.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Rita Silva
-            </a>
-            <br />
-            <Translate id="collections.models" /> Raíssa Ruiz &amp; Patrícia
-            Ferreira
-            <br />
-            <Translate id="collections.scenario" /> Palácio de Cristal
-          </p>
         </div>
       </div>
 
@@ -127,6 +80,58 @@ export default function FwRozPage() {
             src="../../images/fw-roz/29.jpg"
             alt={t`collections.fw_roz`}
           />
+        </div>
+      </div>
+
+      <div className="px-6 py-6 sm:py-8 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-lg leading-8 text-gray-600">
+            Amilod Zareg by{" "}
+            <TranslateLink
+              to="/about#Designer_Marlene_Torres"
+              className="text-amber-600 hover:text-amber-500"
+            >
+              Marlene Torres
+            </TranslateLink>
+            :
+            <br />
+            <Translate id="collections.photographer_female" />{" "}
+            <a
+              className="text-amber-600 hover:text-amber-500"
+              href="http://www.flickr.com/photos/misscartier/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Miss Cartier
+            </a>
+            <br />
+            <Translate id="collections.styling" /> Amilod Zareg
+            <br />
+            <Translate id="collections.hairdresser" />{" "}
+            <a
+              className="text-amber-600 hover:text-amber-500"
+              href="https://www.facebook.com/hairidentityporto"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Rute Hair Identity
+            </a>
+            <br />
+            <Translate id="collections.make_up_artist" />{" "}
+            <a
+              className="text-amber-600 hover:text-amber-500"
+              href="http://ritasilvamakeupartist.blogspot.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Rita Silva
+            </a>
+            <br />
+            <Translate id="collections.models" /> Raíssa Ruiz &amp; Patrícia
+            Ferreira
+            <br />
+            <Translate id="collections.scenario" /> Palácio de Cristal
+          </p>
         </div>
       </div>
     </Layout>

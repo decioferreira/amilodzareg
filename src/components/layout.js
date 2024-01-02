@@ -11,6 +11,11 @@ import {
 
 const collections = [
   {
+    page: "collection_ronoel",
+    name: "layout.fw_ronoel_name",
+    to: "/collection/fw-ronoel",
+  },
+  {
     page: "collection_alice",
     name: "layout.ss_alice_name",
     to: "/collection/ss-alice",

@@ -25,8 +25,8 @@ export default function AboutPage() {
                 </p>
               </div>
               <StaticImage
-                src="../images/ss-alice/01.jpg"
-                alt={t`about.ss_alice_name`}
+                src="../images/fw-ronoel/Lf4.jpg"
+                alt={t`about.fw_ronoel_name`}
                 className="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
               />
             </div>

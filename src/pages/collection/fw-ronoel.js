@@ -352,7 +352,7 @@ export default function SsRonoelPage() {
             <br />
             <Translate id="collections.styling" /> Amilod Zareg
             <br />
-            <Translate id="collections.model" />
+            <Translate id="collections.model" />{" "}
             <a
               className="text-amber-600 hover:text-amber-500"
               href="https://www.instagram.com/leonorr.lucas/"
@@ -365,7 +365,7 @@ export default function SsRonoelPage() {
             <Translate id="collections.scenario" /> Exposição Baluarte, Quartel
             de Monte Pedral
             <br />
-            <Translate id="collections.murals" />
+            <Translate id="collections.murals" />{" "}
             <a
               className="text-amber-600 hover:text-amber-500"
               href="https://www.instagram.com/marianaptks/"
@@ -373,7 +373,7 @@ export default function SsRonoelPage() {
               rel="noreferrer"
             >
               @marianaptks
-            </a>
+            </a>{" "}
             <a
               className="text-amber-600 hover:text-amber-500"
               href="https://www.instagram.com/ines.arisca/"
@@ -381,7 +381,7 @@ export default function SsRonoelPage() {
               rel="noreferrer"
             >
               @ines.arisca
-            </a>
+            </a>{" "}
             <a
               className="text-amber-600 hover:text-amber-500"
               href="https://www.instagram.com/kasartofficial/"
@@ -389,7 +389,7 @@ export default function SsRonoelPage() {
               rel="noreferrer"
             >
               @kasartofficial
-            </a>
+            </a>{" "}
             <a
               className="text-amber-600 hover:text-amber-500"
               href="https://www.instagram.com/tomas_facio/"
@@ -397,7 +397,7 @@ export default function SsRonoelPage() {
               rel="noreferrer"
             >
               @tomas_facio
-            </a>
+            </a>{" "}
             <a
               className="text-amber-600 hover:text-amber-500"
               href="https://www.instagram.com/hazul/"
@@ -405,7 +405,7 @@ export default function SsRonoelPage() {
               rel="noreferrer"
             >
               @hazul
-            </a>
+            </a>{" "}
             <a
               className="text-amber-600 hover:text-amber-500"
               href="https://www.instagram.com/rafi_dieerste/"

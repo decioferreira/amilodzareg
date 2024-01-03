@@ -124,8 +124,8 @@ const IndexPage = () => {
                   <div className="mr-auto w-60 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                     <div className="relative">
                       <StaticImage
-                        src="../images/ss-boudoir/10.jpg"
-                        alt={t`index.boudoir_collection`}
+                        src="../images/fw-ronoel/Lb2.jpg"
+                        alt={t`index.ronoel_collection`}
                         className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
@@ -174,6 +174,26 @@ const IndexPage = () => {
               </p>
             </div>
             <ul className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2">
+              <li>
+                <StaticImage
+                  className="aspect-[3/2] w-full rounded-2xl object-cover"
+                  src="../images/fw-ronoel/La3.jpg"
+                  alt={t`index.fw_ronoel_name`}
+                />
+                <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">
+                  Ronoel
+                </h3>
+                <p className="text-base leading-7 text-gray-600">
+                  <Translate id="index.fall_winter" />
+                </p>
+                <TranslateLink
+                  to="/collection/ss-alice"
+                  className="mt-6 text-amber-600 hover:text-amber-500"
+                >
+                  <Translate id="index.view_collection" />{" "}
+                  <span aria-hidden="true">→</span>
+                </TranslateLink>
+              </li>
               <li>
                 <StaticImage
                   className="aspect-[3/2] w-full rounded-2xl object-cover"
